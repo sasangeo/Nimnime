@@ -88,10 +88,12 @@ async def start_command(client: Bot, message: Message):
                 ids = [int(int(argument[1]) / abs(client.db_channel.id))]
             except BaseException:
                 return
-        temp_msg = await message.reply("<code>Tunggu Sebentar...</code>")
+        temp_msg = await message.reply_sticker(sticker="CAACAgUAAxkBAAEHAfRis22N1Cc-q6Qhy8NPNGONrrueIAAC5wUAAtHfoFVgJIFhKigEkykE", quote=True)
+        #temp_msg = await message.reply("<code>Tunggu Sebentar...</code>")
         try:
             messages = await get_messages(client, ids)
         except BaseException:
+            await message.reply_sticker(sticker="CAACAgUAAxkBAAEHAfRis22N1Cc-q6Qhy8NPNGONrrueIAAC5wUAAtHfoFVgJIFhKigEkykE", quote=True)
             await message.reply_text("<b>Telah Terjadi Error </b>🥺")
             return
         await temp_msg.delete()
@@ -188,7 +190,8 @@ async def send_text(client: Bot, message: Message):
         deleted = 0
         unsuccessful = 0
 
-        pls_wait = await message.reply(
+        pls_wait = 
+        await message.reply(
             "<code>Broadcasting Message Tunggu Sebentar...</code>"
         )
         for row in query:
@@ -231,6 +234,7 @@ async def ping_pong(client, m: Message):
     uptime = await _human_time_duration(int(uptime_sec))
     m_reply = await m.reply_text("Pinging...")
     delta_ping = time() - start
+    temp_msg = await message.reply_sticker(sticker="CAACAgUAAxkBAAEHAfRis22N1Cc-q6Qhy8NPNGONrrueIAAC5wUAAtHfoFVgJIFhKigEkykE", quote=True)
     await m_reply.edit_text(
         "<b>PONG!!</b>🏓 \n"
         f"<b>• Pinger -</b> <code>{delta_ping * 1000:.3f}ms</code>\n"
@@ -243,6 +247,7 @@ async def get_uptime(client, m: Message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
+    await message.reply_sticker(sticker="CAACAgUAAxkBAAEHAfRis22N1Cc-q6Qhy8NPNGONrrueIAAC5wUAAtHfoFVgJIFhKigEkykE", quote=True)
     await m.reply_text(
         "🤖 <b>Bot Status:</b>\n"
         f"• <b>Uptime:</b> <code>{uptime}</code>\n"
