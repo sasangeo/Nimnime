@@ -190,8 +190,7 @@ async def send_text(client: Bot, message: Message):
         deleted = 0
         unsuccessful = 0
 
-        pls_wait = 
-        await message.reply(
+        pls_wait = await message.reply(
             "<code>Broadcasting Message Tunggu Sebentar...</code>"
         )
         for row in query:
