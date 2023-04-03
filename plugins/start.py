@@ -93,8 +93,8 @@ async def start_command(client: Bot, message: Message):
         try:
             messages = await get_messages(client, ids)
         except BaseException:
-            await message.reply_sticker(sticker="CAACAgUAAxkBAAEHAfRis22N1Cc-q6Qhy8NPNGONrrueIAAC5wUAAtHfoFVgJIFhKigEkykE", quote=True)
-            await message.reply_text("<b>Telah Terjadi Error </b>🥺")
+            await message.reply_sticker(sticker="CAACAgUAAxkBAAEMaC1kKiE4RWhqYPyQgiXgw6_tOMkxRQACwgQAAt2QMFT2tQ6aYvnQCy8E", quote=True)
+            #await message.reply_text("<b>Telah Terjadi Error </b>🥺")
             return
         await temp_msg.delete()
 
@@ -132,6 +132,7 @@ async def start_command(client: Bot, message: Message):
                 pass
     else:
         out = start_button(client)
+        await message.reply_sticker(sticker="CAACAgUAAxkBAAEMaDFkKiHYqs6h4Vy6DPcr0gNMD5j8oAACEAUAAjmKKVSOT7aGJAaI6S8E", quote=True)
         await message.reply_text(
             text=START_MSG.format(
                 first=message.from_user.first_name,
@@ -154,6 +155,7 @@ async def start_command(client: Bot, message: Message):
 @Bot.on_message(filters.command("start") & filters.private)
 async def not_joined(client: Bot, message: Message):
     buttons = fsub_button(client, message)
+    await message.reply_sticker(sticker="CAACAgUAAxkBAAEMaCpkKiESRqcUnvacW26sbcSjVMeW5QACMAUAAjULIFSOZ33pj4_QiS8E", quote=True)
     await message.reply(
         text=FORCE_MSG.format(
             first=message.from_user.first_name,
@@ -233,12 +235,12 @@ async def ping_pong(client, m: Message):
     uptime = await _human_time_duration(int(uptime_sec))
     m_reply = await m.reply_text("Pinging...")
     delta_ping = time() - start
-    temp_msg = await message.reply_sticker(sticker="CAACAgUAAxkBAAEHAfRis22N1Cc-q6Qhy8NPNGONrrueIAAC5wUAAtHfoFVgJIFhKigEkykE", quote=True)
-    await m_reply.edit_text(
+    temp_msg = await m_reply.edit_text(
         "<b>PONG!!</b>🏓 \n"
         f"<b>• Pinger -</b> <code>{delta_ping * 1000:.3f}ms</code>\n"
         f"<b>• Uptime -</b> <code>{uptime}</code>\n"
     )
+
 
 
 @Bot.on_message(filters.command("uptime"))
@@ -246,7 +248,6 @@ async def get_uptime(client, m: Message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    await message.reply_sticker(sticker="CAACAgUAAxkBAAEHAfRis22N1Cc-q6Qhy8NPNGONrrueIAAC5wUAAtHfoFVgJIFhKigEkykE", quote=True)
     await m.reply_text(
         "🤖 <b>Bot Status:</b>\n"
         f"• <b>Uptime:</b> <code>{uptime}</code>\n"
