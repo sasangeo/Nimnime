@@ -55,6 +55,9 @@ def fsub_button(client, message):
     if not FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
         buttons = [
             [
+                InlineKeyboardButton(text="ᴠɪᴅᴇᴏ ᴛᴜᴛᴏʀɪᴀʟ ᴘᴀᴋᴀɪ ʙᴏᴛ", f="https://t.me/Central_Dark_World/19"),
+            ],
+            [
                 InlineKeyboardButton(text="ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=client.invitelink2),
             ],
         ]
@@ -73,6 +76,9 @@ def fsub_button(client, message):
     if FORCE_SUB_CHANNEL and not FORCE_SUB_GROUP:
         buttons = [
             [
+                InlineKeyboardButton(text="ᴠɪᴅᴇᴏ ᴛᴜᴛᴏʀɪᴀʟ ᴘᴀᴋᴀɪ ʙᴏᴛ", f="https://t.me/Central_Dark_World/19"),
+            ],
+            [
                 InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
             ],
         ]
@@ -90,6 +96,9 @@ def fsub_button(client, message):
         return buttons
     if FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
         buttons = [
+            [
+                InlineKeyboardButton(text="ᴠɪᴅᴇᴏ ᴛᴜᴛᴏʀɪᴀʟ ᴘᴀᴋᴀɪ ʙᴏᴛ", f="https://t.me/Central_Dark_World/19"),
+            ],
             [
                 InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
                 InlineKeyboardButton(text="ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=client.invitelink2),
