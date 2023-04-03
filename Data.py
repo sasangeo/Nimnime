@@ -21,9 +21,15 @@ class Data:
  ├ /users - Untuk melihat statistik pengguna bot
  ├ /batch - Untuk membuat link lebih dari satu file
  ├ /speedtest - Untuk Mengetes kecepatan server bot
- └ /broadcast - Untuk mengirim pesan broadcast ke pengguna bot
-
-
+ └ /broadcast - Untuk mengirim pesan broadcast ke pengguna bot.
+ 
+ • Creator : @{}
+ • Channel : <a href='https://t.me/Anime_Bahasa_Indonesia'>Klik Disini!</a>
+ • Group : <a href='https://t.me/group_anime_indonesia'>Klik Disini!</a>
+ • Meme Receh : <a href='https://t.me/Central_Dark_World'>Klik Disini!</a>
+ 
+ 
+ </b>
 """
 
     close = [
@@ -50,8 +56,9 @@ class Data:
 @{} adalah Bot Telegram untuk menyimpan File Anime yang dapat Diakses melalui Link Khusus.
 
  • Creator : @{}
- • Channel : <a href='https://docs.pyrogram.org'>Anime Bahasa Indonesia Channel</a>
- • Group : <a href='https://github.com/mrismanaziz/File-Sharing-Man'>Anime Bahasa Indonesia Group</a>
+ • Channel : <a href='https://t.me/Anime_Bahasa_Indonesia'>Klik Disini!</a>
+ • Group : <a href='https://t.me/group_anime_indonesia'>Klik Disini!</a>
+ • Meme Receh : <a href='https://t.me/Central_Dark_World'>Klik Disini!</a>
 
-
+</b>
 """
