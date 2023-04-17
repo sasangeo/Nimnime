@@ -132,7 +132,7 @@ async def start_command(client: Bot, message: Message):
                 pass
     else:
         out = start_button(client)
-        await message.reply_sticker(sticker="CAACAgUAAxkBAAEMaDFkKiHYqs6h4Vy6DPcr0gNMD5j8oAACEAUAAjmKKVSOT7aGJAaI6S8E", quote=True)
+        #await message.reply_sticker(sticker="CAACAgUAAxkBAAEMaDFkKiHYqs6h4Vy6DPcr0gNMD5j8oAACEAUAAjmKKVSOT7aGJAaI6S8E", quote=True)
         await message.reply_text(
             text=START_MSG.format(
                 first=message.from_user.first_name,
@@ -143,7 +143,7 @@ async def start_command(client: Bot, message: Message):
                 mention=message.from_user.mention,
                 id=message.from_user.id,
             ),
-            reply_markup=InlineKeyboardMarkup(out),
+            #reply_markup=InlineKeyboardMarkup(out),
             disable_web_page_preview=True,
             quote=True,
         )
