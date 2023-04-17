@@ -133,7 +133,7 @@ async def start_command(client: Bot, message: Message):
     else:
         out = start_button(client)
         #await message.reply_sticker(sticker="CAACAgUAAxkBAAEMaDFkKiHYqs6h4Vy6DPcr0gNMD5j8oAACEAUAAjmKKVSOT7aGJAaI6S8E", quote=True)
-        #await message.reply_text(
+        await message.reply_text(
             text=START_MSG.format(
                 first=message.from_user.first_name,
                 last=message.from_user.last_name,
