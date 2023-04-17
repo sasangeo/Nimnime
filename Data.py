@@ -23,12 +23,6 @@ class Data:
  ├ /speedtest - Untuk Mengetes kecepatan server bot
  └ /broadcast - Untuk mengirim pesan broadcast ke pengguna bot.
  
- • Creator : @{}
- • Channel : <a href='https://t.me/Anime_Bahasa_Indonesia'>Klik Disini!</a>
- • Group : <a href='https://t.me/group_anime_indonesia'>Klik Disini!</a>
- • Meme Receh : <a href='https://t.me/Central_Dark_World'>Klik Disini!</a>
- 
- 
  </b>
 """
 
